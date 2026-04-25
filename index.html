@@ -1,0 +1,373 @@
+432<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#591bdc",
+                    "inverse-primary": "#5f5c73",
+                    "surface-bright": "#2c2b32",
+                    "secondary-fixed-dim": "#cabaff",
+                    "primary-fixed": "#e7e2fe",
+                    "on-primary-fixed-variant": "#5e5b72",
+                    "surface-container-low": "#131317",
+                    "surface-container-lowest": "#000000",
+                    "tertiary-container": "#00e3fd",
+                    "on-primary-fixed": "#413f54",
+                    "secondary-container": "#591adc",
+                    "surface-tint": "#e7e2fe",
+                    "primary": "#e7e2fe",
+                    "on-error": "#490013",
+                    "error-container": "#a70138",
+                    "secondary-fixed": "#d8caff",
+                    "on-error-container": "#ffb2b9",
+                    "tertiary-fixed": "#00e3fd",
+                    "background": "#0e0e12",
+                    "secondary": "#a68cff",
+                    "primary-fixed-dim": "#d9d4ef",
+                    "primary-container": "#a29db7",
+                    "on-tertiary-fixed-variant": "#005762",
+                    "surface-container-high": "#1f1f25",
+                    "on-surface": "#f3eff6",
+                    "tertiary-dim": "#00d4ec",
+                    "on-background": "#f3eff6",
+                    "inverse-on-surface": "#555459",
+                    "tertiary-fixed-dim": "#00d4ec",
+                    "on-primary": "#545167",
+                    "surface": "#0e0e12",
+                    "surface-container-highest": "#25252b",
+                    "outline-variant": "#48474c",
+                    "outline": "#76757a",
+                    "on-primary-container": "#232034",
+                    "on-secondary": "#25006b",
+                    "error-dim": "#d73357",
+                    "surface-variant": "#25252b",
+                    "tertiary": "#81ecff",
+                    "primary-dim": "#d9d4ef",
+                    "on-tertiary-fixed": "#003840",
+                    "on-tertiary-container": "#004d57",
+                    "error": "#ff6e84",
+                    "surface-container": "#19191e",
+                    "on-surface-variant": "#acaab0",
+                    "on-tertiary": "#005762",
+                    "secondary-dim": "#7e51ff",
+                    "on-secondary-fixed": "#3b00a0",
+                    "inverse-surface": "#fcf8fe",
+                    "on-secondary-container": "#e4daff",
+                    "surface-dim": "#0e0e12"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #0e0e12;
+        color: #f3eff6;
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .cosmic-gradient-bg {
+        background: radial-gradient(circle at top right, rgba(166,140,255,0.15), transparent),
+                    radial-gradient(circle at bottom left, rgba(129,236,255,0.1), transparent);
+      }
+      .glass-card {
+        background: rgba(37, 37, 43, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .hero-glow {
+        filter: drop-shadow(0 0 20px rgba(129, 236, 255, 0.3));
+      }
+    </style>
+</head>
+<body class="selection:bg-tertiary selection:text-on-tertiary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<div class="text-2xl font-bold tracking-tighter text-on-surface font-headline">
+                WINDACELESTIAL
+            </div>
+<div class="hidden md:flex items-center space-x-10 font-['Space_Grotesk'] tracking-tight text-sm uppercase">
+<a class="text-cyan-300 border-b-2 border-cyan-400 pb-1" href="#home">Beranda</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#tentang">Tentang Kami</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#layanan">Layanan</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#portofolio">Portofolio</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#kontak">Kontak</a>
+</div>
+<button class="bg-gradient-to-r from-secondary to-tertiary px-6 py-2 rounded-full font-headline font-bold text-xs uppercase tracking-widest text-on-secondary hover:brightness-125 transition-all scale-95 active:duration-100">
+                Hubungi Kami
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden cosmic-gradient-bg" id="home">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div>
+<span class="font-headline uppercase tracking-[0.4em] text-tertiary text-xs mb-4 block">Ekosistem Digital Masa Depan</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold leading-[0.9] tracking-tighter text-on-surface mb-8">
+                    Membangun <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">Masa Depan</span> <br/> di Galaksi Digital
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Kami mengkurasi solusi teknologi paling mutakhir untuk membantu bisnis Anda bermanuver di antara bintang-bintang inovasi global.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="px-10 py-4 rounded-full bg-gradient-to-r from-secondary to-tertiary text-on-secondary font-headline font-bold text-sm tracking-widest text-center hover:brightness-110 transition-all flex items-center justify-center gap-2 group" href="#layanan">
+                        JELAJAHI SEKARANG
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-10 py-4 rounded-full border border-outline-variant/30 text-on-surface font-headline font-bold text-sm tracking-widest text-center hover:bg-white/5 transition-all" href="#tentang">
+                        PELAJARI LEBIH LANJUT
+                    </a>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute w-[400px] h-[400px] bg-secondary/10 blur-[100px] rounded-full animate-pulse"></div>
+<img alt="Futuristic cosmic interface" class="relative z-10 w-full max-w-md rounded-3xl hero-glow" data-alt="Futuristic glowing purple and cyan digital core floating in dark space with nebula gas clouds and small particles around it" src="winda.jpeg"/>
+</div>
+</div>
+</section>
+<!-- Tentang Kami Section -->
+<section class="py-32 relative bg-surface-container-low" id="tentang">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5">
+<div class="relative">
+<img alt="Stellar evolution" class="rounded-2xl w-full" data-alt="A detailed glowing purple planet with gaseous rings floating against a deep black cosmic background with distant stars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRskuQYdbGLb5kssvRuj_GJfLzvyu6GHBI-62DNtw2u-IFgRCNjn6obzhSSYC4UjEUGQA_Z2e3P6CNCpx1LB7DrK_b6pLfC4lZdnTEbhaGVhAdd9ADsePQb2lmSjcDjrm2C0n7PZWF33KL-6G_VjqdStatg7xGzmI5FSAZUzvNwHkXX3026ubL5CWpqZ9RjW72waiTCdodZYqIHtbaylU05FrhrYYEfVCoYBRGXvxOahiIIAYixjLRtCVNO3oefPFTwujT951JyA"/>
+<div class="absolute -bottom-8 -right-8 glass-card p-8 rounded-2xl border border-white/5 max-w-[240px]">
+<div class="text-tertiary font-headline text-4xl font-bold mb-1">99+</div>
+<p class="text-xs font-headline uppercase tracking-widest text-on-surface-variant">Orbit Proyek Selesai</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<span class="font-headline uppercase tracking-[0.4em] text-secondary text-xs mb-4 block">Eksplorasi Kami</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-8 leading-tight">Visi Melampaui Cakrawala Peristiwa</h2>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Celestial Curator lahir dari keinginan untuk menyatukan estetika dan fungsionalitas dalam satu ekosistem digital yang harmonis. Kami percaya bahwa setiap entitas bisnis memiliki orbit uniknya sendiri.
+                    </p>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Misi kami adalah menjadi katalisator yang mempercepat akselerasi digital Anda melalui strategi yang didorong oleh data dan kreativitas tanpa batas, layaknya ekspansi alam semesta.
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-outline-variant/20 pt-10">
+<div>
+<h4 class="font-headline font-bold text-on-surface mb-2">Presisi Stellar</h4>
+<p class="text-sm text-on-surface-variant">Setiap baris kode dan piksel disusun dengan ketelitian astronomis.</p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface mb-2">Inovasi Orbit</h4>
+<p class="text-sm text-on-surface-variant">Terus berputar menciptakan solusi baru untuk tantangan masa depan.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Layanan Section -->
+<section class="py-32 bg-surface" id="layanan">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="font-headline uppercase tracking-[0.4em] text-tertiary text-xs mb-4 block">Spektrum Solusi</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface">Layanan Galaksi Kami</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Layanan 1 -->
+<div class="group p-10 rounded-[2rem] bg-surface-container transition-all hover:bg-surface-container-highest border border-transparent hover:border-tertiary/20">
+<div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Transformasi Digital</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Mengubah struktur konvensional bisnis Anda menjadi arsitektur digital yang lincah dan berorientasi masa depan.
+                    </p>
+<ul class="space-y-3 text-sm font-headline text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Automasi Alur Kerja
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Modernisasi Aplikasi
+                        </li>
+</ul>
+</div>
+<!-- Layanan 2 -->
+<div class="group p-10 rounded-[2rem] bg-surface-container transition-all hover:bg-surface-container-highest border border-transparent hover:border-secondary/20">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="cloud_queue">cloud_queue</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Solusi Awan (Cloud)</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Infrastruktur tanpa batas di awan yang menjamin skalabilitas dan ketersediaan tinggi untuk aset digital Anda.
+                    </p>
+<ul class="space-y-3 text-sm font-headline text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Migrasi Cloud
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Manajemen Serverless
+                        </li>
+</ul>
+</div>
+<!-- Layanan 3 -->
+<div class="group p-10 rounded-[2rem] bg-surface-container transition-all hover:bg-surface-container-highest border border-transparent hover:border-error/20">
+<div class="w-16 h-16 rounded-2xl bg-error/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-error" data-icon="shield_moon">shield_moon</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Keamanan Galaksi</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Perlindungan berlapis terhadap ancaman siber dengan protokol keamanan tingkat tinggi yang tak tertembus.
+                    </p>
+<ul class="space-y-3 text-sm font-headline text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Audit Keamanan Siber
+                        </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Enkripsi Quantum Ready
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portofolio Section -->
+<section class="py-32 bg-surface-container-lowest" id="portofolio">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="font-headline uppercase tracking-[0.4em] text-secondary text-xs mb-4 block">Arsip Bintang</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface">Proyek Unggulan Kami</h2>
+</div>
+<a class="font-headline text-sm font-bold text-tertiary flex items-center gap-2 group" href="#">
+                    LIHAT SEMUA PROYEK
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="north_east">north_east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden rounded-[2.5rem] bg-surface-container-low aspect-[4/5]">
+<img alt="Nebula Banking App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Smartphone display showing a futuristic banking app interface with glowing neon purple charts and deep black backgrounds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZ3XB7FDt3Go4fs8i5N2xQamMHo_5eoIn7CD_E7_drohbuIRdiDHCKtVsDug7rs0ngzsS4uE2QU6R-dzHiSOSIq6ARoSGXsWC5XFsOB7Z5wzvGBma4EYhXhD-_-SORJKpkKL7N1_XFJa1bu_qiwDdTdvyxLHkMtJe4akEftPDvz5EXZN8-xnqe_rKmIbPHjfaUCGVxzoHVGcGN3afqye4QsBzu7QE1qJHLlMVi7sZs8uyoJSZeeCacEcMW1oZAv-YZNCpMulaZA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-headline text-[10px] uppercase tracking-[0.3em] text-tertiary mb-2 block">Fintech</span>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-2">Nebula Banking v2</h4>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Ekosistem pembayaran digital terenkripsi dengan AI.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden rounded-[2.5rem] bg-surface-container-low aspect-[4/5]">
+<img alt="StarStream Platform" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Cinematic interface for a video streaming platform with galaxy background elements and floating 3D movie posters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQyvb7PjQdf1rXg5CbodKO8pGm-lBT-69-5yAHKEDs-nD8sjhYF_ht0-4xP28hD1fHkd8e_-koToIW68frgmf5LmHhoRFW08C3LqXQEi1zMqZnmLpfoloaSzp2yChoVFeohuNeJHEU-Mf8qt_hR5ZqbFqRln9f62iA0eBPmSbbd0yKZeO92zwXjGytkT-lNUkL97g-kzaYGPvcHbxTi2qGY8QNyYI9NJGbHsiyp54mjkAor81GhvYEk4ltQ8JOyjnOPIhvTgUwA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-headline text-[10px] uppercase tracking-[0.3em] text-secondary mb-2 block">Entertainment</span>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-2">StarStream UI</h4>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Platform streaming konten 8K dengan latensi nol.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden rounded-[2.5rem] bg-surface-container-low aspect-[4/5]">
+<img alt="Cosmo Logistic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Data visualization dashboard for logistics showing a global map with glowing interconnected nodes in cyan and magenta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVe5dnNvnxLQXK3eJteOYruYrs-QRhevoidGKvTUej8d7sRw1GtCC3s0RQ00dxsUasYlbWYLHQIDjKd9eEqQemucLg2chFeq-ZtPPi1haa9BMn_hrnAXUaNmX7Zzviu0R94VDpVlBqqeEmFYUumHcIQX6KXndTbnDOjdvZt4iZ4bFih9a7ujjHHX4IZSIunZm15oWkrKL8kn9presZoRxDm3hMf1M00r5XDTQtkAYfFIPjtNMAXdKTOVu3QFPAyvS69A2f4dCV0g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="font-headline text-[10px] uppercase tracking-[0.3em] text-cyan-400 mb-2 block">Enterprise</span>
+<h4 class="text-2xl font-headline font-bold text-on-surface mb-2">Cosmo Logistic</h4>
+<p class="text-sm text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Sistem manajemen logistik berbasis real-time GPS satelit.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kontak Section -->
+<section class="py-32 relative cosmic-gradient-bg" id="kontak">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<span class="font-headline uppercase tracking-[0.4em] text-tertiary text-xs mb-4 block">Transmisi Sinyal</span>
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-on-surface mb-8">Hubungi Markas Besar Kami</h2>
+<p class="text-on-surface-variant text-lg mb-12 leading-relaxed">
+                        Siap untuk meluncurkan proyek Anda ke orbit berikutnya? Kirimkan pesan melalui frekuensi ini dan tim ahli kami akan segera merespons.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface mb-1">alamat</h5>
+<p class="text-sm text-on-surface-variant">Riau, indonesia</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<h5 class="font-headline font-bold text-on-surface mb-1">Email</h5>
+<p class="text-sm text-on-surface-variant">Windacelestial@Gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 md:p-12 rounded-[2.5rem] border border-white/5">
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="font-headline text-[10px] uppercase tracking-widest text-on-surface-variant ml-1">Identitas (Nama)</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant/30 py-4 px-0 text-on-surface focus:ring-0 focus:border-tertiary transition-all placeholder:text-outline" placeholder="Masukkan nama lengkap Anda" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-headline text-[10px] uppercase tracking-widest text-on-surface-variant ml-1">Frekuensi (Email)</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant/30 py-4 px-0 text-on-surface focus:ring-0 focus:border-tertiary transition-all placeholder:text-outline" placeholder="nama@perusahaan.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-headline text-[10px] uppercase tracking-widest text-on-surface-variant ml-1">Pesan Rahasia</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant/30 py-4 px-0 text-on-surface focus:ring-0 focus:border-tertiary transition-all placeholder:text-outline resize-none" placeholder="Ceritakan tentang visi proyek Anda..." rows="4"></textarea>
+</div>
+<button class="w-full mt-8 py-5 rounded-full bg-gradient-to-r from-secondary to-tertiary text-on-secondary font-headline font-bold text-sm tracking-widest hover:brightness-110 transition-all shadow-lg shadow-secondary/20" type="submit">
+                            KIRIM TRANSMISI
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e12] w-full py-12 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-xl font-bold text-cyan-400 font-headline tracking-tighter">WINDACELESTIAL</div>
+<p class="font-['Manrope'] text-sm leading-relaxed text-slate-500 max-w-xs text-center md:text-left">
+                    © 2026 Celestial Curator. Dirancang untuk keabadian di ruang digital.
+                </p>
+</div>
+<div class="flex gap-10">
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Manrope'] text-sm" href="#">Instagram</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Manrope'] text-sm" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-cyan-300 transition-colors font-['Manrope'] text-sm" href="#">Dribbble</a>
+</div>
+<div class="text-slate-500 text-sm font-headline">
+<span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span> Sistem Operasional
+            </div>
+</div>
+</footer>
+</body></html>
